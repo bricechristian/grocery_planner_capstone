@@ -1,9 +1,3 @@
 language: node_js
 node_js: node
 deploy: immense-meadow-84157
-  provider: heroku
-  api_key:
-    secure: Vz0+65A4NlF+de9om4vjR5lZnXg1nbgoLfqwuPuz0xfIIrkp5O7mSg54GJfVMyJXiuf49AoiPwHs8Fbu0VrKHxQA8UsN9TNAhU/NU9wAiyy1+mcpiuRR4JfJXiAe4FQd5E1yikNIDID4Cv9cS6vxUjcbljtoh6dRAL10YqEahf0mcleDCjtMk5nW4y0QzFSufIFE4lYWRtD7Fbn8H+TAXEC3TU313prpzC/D7clpfJ4u18Ods8nhcmymqMOchnB7V0bbFud2IaILk/0mrm46IR6NWaPl38h/w5uEzio5OY+1eRqSrFLLiVI7yClTNpS5SWDnCP5OSmSx/RK5o1PQ7iqsV0mQ3T/r6bSoA7bVXhAL3dbqBL5tNY+1hFkmu1E2l3csvg+vpNgAXonoF0BZfgz0LBNGiha4yIrwfSKbELLrBzKT6B8KDJXq5RLDndw/kkjP2G5CbfJ6Z+Zc+NOJmuQEDKRIH+z5N2a+Ox2kH/k/SyRFpuoidn1DM/lXMQyaK6PS+kS3v/6jjQ+Lxu/4ZRGy1UTDK5kznzRbxi8QR8LvowJeR1Auy4gDQ3088Isxzdy/hD7J/Vcd4c3or2Ks73ZiGylXXMGNnYaPynmRTSK5k/CyL5lALZQCMyBD5l6lVOMocuRNThy4qxWfiUAIePbLoDSq78Tnx+OXSwnJjWU=
-  app: grocery_planner_capstone
-  on:
-    repo: bricechristian/grocery_planner_capstone
