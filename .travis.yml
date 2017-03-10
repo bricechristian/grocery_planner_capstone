@@ -1,3 +1,3 @@
 language: node_js
 node_js: node
-deploy: immense-meadow-84157:
+deploy:app: immense-meadow-84157
