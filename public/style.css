@@ -1,0 +1,19 @@
+h1, h2 {
+	text-align: center;
+}
+
+.list-container {
+	width: 400px;
+	height: 700px;
+	border: 2px solid black;
+	margin: auto;
+}
+
+.query-add {
+	margin: auto;
+	text-align: center;
+}
+
+li {
+	list-style-type: none;
+}
