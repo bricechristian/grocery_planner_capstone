@@ -1,14 +1,17 @@
 const mongoose = require('mongoose');
 
 const groceryListSchema = mongoose.Schema({
-	item: {type: String, required: true }
-	price: {type: Number, required: true}
+	item: {
+		name: {type: String, required: true},
+		price: {type: String, required: true}
+	}
 })
+
 
 groceryListSchema.methods.apiRetrn = function () {
 	return {
-		this.item,
-		this.price
+		name: this.item.name,
+		price: this.item.price
 	};
 }
 

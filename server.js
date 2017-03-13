@@ -1,10 +1,12 @@
 const express = require('express');
 const app = express();
-const {groceryListSchema} = require('./models')
-app.use(express.static('public'));
+const {groceryList} = require('./models')
+app.use(express.static(__dirname + '/public'));
+
+
 
 app.get('/', (req, res) => {
-	res.sendFile(__dirname + '/views/index.html');
+	res.sendFile('index.html');
 })
 
 
