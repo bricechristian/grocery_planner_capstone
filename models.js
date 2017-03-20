@@ -1,19 +1,9 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema; 
 
-const groceryListSchema = mongoose.Schema({
-	item: {
-		name: {type: String, required: true},
+const GroceryListSchema = new Schema({
+		name: {type: String, unique: true, required: true},
 		price: {type: String, required: true}
-	}
-})
+});
 
-
-groceryListSchema.methods.apiRetrn = function () {
-	return {
-		name: this.item.name,
-		price: this.item.price
-	};
-}
-
-
-module.exports = {groceryListSchema};
+module.exports = mongoose.model('GroceryList', GroceryListSchema);

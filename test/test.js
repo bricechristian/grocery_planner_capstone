@@ -1,20 +1,46 @@
-const chai = require('chai');
-const chaiHttp = require('chai-http');
-const {app} = require('../server');
-const should = chai.should();
-
-chai.use(chaiHttp);
+const app = require('../server');
+const request = require('supertest');
+const expect = require('chai').expect;
+const GroceryList = require('../models')
 
 
-describe('testing app endpoints', function() {
-	it('should verify the GET endpoint as HTML', function() {
-		let res;
-		return chai.request(app)
+
+describe('[GROCERY LIST]', function(){
+	it('should verify the root as HTML', function(done){
+		request(app)
 		.get('/')
-		.then(function(_res){
-			let res = _res;
-			res.should.have.status(200);
-			res.should.be.html;
-		});
+		.set('Accept', 'application/json')
+		.expect('Content-type', '/json/')
+		.expect(200)
+		.end(function(err, res){
+			expect(res).to.be.html;
+			done();
+		})
 	});
-});
+
+	it('should return all items on GET as an array', function(done){
+		request(app)
+		.get('/items')
+		.set('Accept', 'application/json')
+		.expect('Content-type', '/json/')
+		.expect(200)
+		.end(function(err, res){
+			expect(res.body).to.be.a('object');
+			done();
+		})
+	});
+
+		it('should verify that each item on GET is an object', function(done){
+		request(app)
+		.get('/items/:id')
+		.set('Accept', 'application/json')
+		.expect('Content-type', '/json/')
+		.expect(200)
+		.end(function(err, res){
+			expect(res.item).to.be.a('object');
+			expect(res.item).to.have.property('name', 'price');
+			done();
+		})
+	});
+
+})
