@@ -1,3 +1,7 @@
+body {
+	background-color: red;
+}
+
 h1, h2 {
 	text-align: center;
 }
@@ -16,4 +20,8 @@ h1, h2 {
 
 li {
 	list-style-type: none;
+}
+
+.update-button, .delete-button {
+	display: none;
 }

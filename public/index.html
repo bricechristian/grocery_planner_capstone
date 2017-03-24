@@ -10,14 +10,21 @@
 		<h2>Grocery List</h2>
 			<div class="query-add">
 			  <form action="/" method="POST">
-			    <input type="text" placeholder="Grocery Item" name="item">
-			    <input type="text" placeholder="Price" name="price">
-			    <button type="submit">Add</button>
+			    <input type="text" placeholder="Grocery Item" name="item" class="name">
+			    <input type="text" placeholder="Price" name="price" class="price">
+			    <button type="submit" class="add-button">Add</button>
 			  </form>
 			</div>
 			<div class="item-container">
-				<li></li>
+				<li> 
+				<button class="edit-button">Edit Item</button>
+				<button class="update-button">Update</button> 
+				<button class="delete-button">Delete</button>
+				</li>
 			</div>
 	</div>
+
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script type="text/javascript" src="client.js"></script>
 </body>
 </html>	
