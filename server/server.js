@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 const path = require('path');
 
-
 // connection to mongo
 
 mongoose.connect('mongodb://localhost/groceryList');
@@ -33,14 +32,15 @@ app.all('*', function(req, res, next){
 
 app.use(function(err, req, res, next){
 	if(err){
+		console.log(err);
 		res.status(401).send('Oops! Try again.')
 	}
 	return;
 })
 
 
-// app.listen(3000);
-// console.log('on port 3000');
+app.listen(3000);
+console.log('on port 3000');
 
 module.exports = app;
 

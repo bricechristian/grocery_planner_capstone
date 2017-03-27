@@ -3,28 +3,45 @@
 <head>
 	<title>Shop Smart Start</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
 </head>
 <body>
-	<h1>Shop Smart Start</h1>
-	<div class="list-container">
-		<h2>Grocery List</h2>
-			<div class="query-add">
-			  <form action="/" method="POST">
-			    <input type="text" placeholder="Grocery Item" name="item" class="name">
-			    <input type="text" placeholder="Price" name="price" class="price">
-			    <button type="submit" class="add-button">Add</button>
-			  </form>
-			</div>
-			<div class="item-container">
-				<li> 
-				<button class="edit-button">Edit Item</button>
-				<button class="update-button">Update</button> 
-				<button class="delete-button">Delete</button>
-				</li>
-			</div>
-	</div>
 
-  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<div class="grid">
+    <div class="row">
+    <div class="background"></div>
+		
+		<div class="col-L-12">
+			<h1 class="col">Shop Smart Start</h1>
+		</div>	
+
+		<div class="col-L-12">
+			<div class="list-container col">
+				<h2>Grocery List</h2>
+					<div class="query-add">
+					  <form action="/" method="POST">
+					    <input type="text" placeholder="Grocery Item" name="item" class="name">
+					    <input type="text" placeholder="Price" name="price" class="price">
+					    <button type="submit" class="add-button">Add</button>
+					  </form>
+					</div>
+					<div class="item-container">
+						<p class="item"></p>
+					</div>
+					<div class="total-container">
+						<p class="total"></p>
+					</div>
+			</div>
+		</div>
+
+
+	</div>
+</div>	
+
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
   <script type="text/javascript" src="client.js"></script>
 </body>
 </html>	
