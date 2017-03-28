@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Shop Smart Start</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="grid">
+		<div class="row">
+			<div class="background"></div>
+
+			<div class="col-L-12">
+				<h1 class="col">Shop Smart Start</h1>
+			</div>
+
+			<div class="col-L-12">
+				<div class="list-container col">
+					<h2>Grocery List</h2>
+					<div class="query-add">
+						<form>
+							<input type="text" placeholder="Grocery Item" name="item" class="name">
+							<input type="text" placeholder="Price" name="price" class="price">
+							<button type="submit" class="add-button">Add</button>
+						</form>
+					</div>
+					<div class="item-container">
+						<ul class="results"></ul>
+					</div>
+					<div class="total-container">
+						<p class="total"></p>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="client.js"></script>
+</body>
+
+</html>
