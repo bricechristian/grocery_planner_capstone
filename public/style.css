@@ -2,15 +2,46 @@
   font-family: 'Roboto', sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
+  font-weight: 300;
+  line-height: 1.65;
+  color: #3f3a3a;
+
 }
 
-h1, h2 {
+body{
+    background-color: #000;
+/*  background-image: url(http://radionihuil.com.ar/wp-content/uploads/2015/06/458169.jpg);
+*/
+  background:
+/*      linear-gradient(
+      rgba(255, 255, 255, 0.45), 
+      rgba(255, 255, 255, 0.45)
+    ), */
+      url(pineapple.jpg) no-repeat center center fixed;
+  background-size: cover;
+
+}
+
+.logo {
+    width: 150px; 
+    vertical-align: baseline;
+}
+
+h1 {
 	text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.about {
+  text-align: center;
 }
 
 .list-container {
-	border: 2px solid black;
+	border: 5px solid #3f3a3a;
 	margin: auto;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
 }
 
 .query-add {
@@ -23,16 +54,30 @@ li {
 	text-align: center;
 }
 
-p {
-	text-align: center;
+.edit {
+  width: 15px;
+  margin-right: 20px;
+  margin-left: 5px;
+  cursor: pointer;
 }
 
 
-/*.update-button, .delete-button, .edit-button {
-	float: left;
-	display: inline-block;
+/*.delete-button {
+   margin: 0 10px 0 20px;
 }*/
 
+#itemPrice {
+  margin-left: 10px;
+}
+
+/*.delete-button, .edit-button {
+    height: 100px;
+    width: 75px;
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}*/
 
 
 
