@@ -1,5 +1,6 @@
 language: node_js
 node_js: node
+services: mongodb
 deploy:
   app: immense-meadow-84157
   api_key: aff02f83-69b3-4c2f-864b-22b048bcf385
