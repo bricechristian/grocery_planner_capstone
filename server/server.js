@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 const path = require('path');
 
+
 // connection to mongo
 
 mongoose.connect('mongodb://localhost/groceryList');
@@ -17,7 +18,7 @@ mongoose.connect('mongodb://localhost/groceryList');
 app.use(express.static(path.join(__dirname, '../', 'public')));
 
 // body parser makes it possible to post JSON to the server
-// we can accss data we post on as req.body
+// we can access data we post on as req.body
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
@@ -39,7 +40,7 @@ app.use(function(err, req, res, next){
 
 
 app.listen(3000);
-console.log('on port 3000');
+console.log('listening on port 3000');
 
 module.exports = app;
 
