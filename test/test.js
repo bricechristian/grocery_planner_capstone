@@ -31,8 +31,12 @@ describe('[GROCERY LIST]', function(){
 	});
 
 	it('should return each item on the GET as an object with correct keys', function(done){
+
+		var item1 = {name: 'shrimp and grits', price: '16.99'}
+
 		request(app)
 		.get('/api/items')
+		.send(item1)
 		.set('Accept', 'application/json')
 		.expect('Content-type', '/json/')
 		.expect(200)
@@ -46,11 +50,11 @@ describe('[GROCERY LIST]', function(){
 	
 	it('should post a grocery item as an object with correct keys', function(done){
 
-		var item = {name: 'fried green tomatoes', price: '5.99'}
+		var item2 = {name: 'fried green tomatoes', price: '5.99'}
 
 		request(app)
 		.post('/api/items')
-		.send(item)
+		.send(item2)
 		.expect('Content-type', '/json/')
 		.expect(200)
 		.end(function(err, res){
@@ -64,11 +68,11 @@ describe('[GROCERY LIST]', function(){
 	
 	it('should delete a grocery item', function(done){
 
-		var item = {name: 'chicken blt', price: '6.99'}
+		var item3 = {name: 'chicken blt', price: '6.99'}
 
 		request(app)
 		.post('/api/items')
-		.send(item)
+		.send(item3)
 		.expect('Content-type', '/json/')
 		.expect(200)
 		.end(function(err, res){
