@@ -1,7 +1,7 @@
 const app = require('../server/server');
 const request = require('supertest');
 const expect = require('chai').expect;
-const GroceryList = require('../server/api/GroceryList/GroceryListModel')
+const GroceryList = require('../server/api/groceryList/groceryListModel')
 
 
 
