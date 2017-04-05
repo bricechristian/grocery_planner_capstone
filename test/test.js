@@ -32,17 +32,19 @@ describe('[GROCERY LIST]', function(){
 
 	it('should return each item on the GET as an object with correct keys', function(done){
 
-		var item1 = {name: 'shrimp and grits', price: '16.99'}
-
 		request(app)
 		.get('/api/items')
-		.send(item1)
 		.set('Accept', 'application/json')
 		.expect('Content-type', '/json/')
 		.expect(200)
 		.end(function(err, res){
-					expect(res.body[0]).to.be.an('object');
-					expect(res.body[0]).to.have.any.keys('name', 'price');
+				for(var i = 0; i < res.body.length; i++){
+					expect(res.body[i]).to.be.an('object');
+					expect(res.body[i]).to.have.any.keys('name', 'price');
+				}
+				if(res.body.length === 0){
+					expect(res.body).to.be.empty;
+				}
 			done();		
 		})
 	});
