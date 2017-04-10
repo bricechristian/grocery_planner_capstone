@@ -9,7 +9,7 @@ const path = require('path');
 
 // connection to mongo
 
-mongoose.connect('mongodb://localhost/groceryList');
+mongoose.connect(process.env.MONGODB || 'mongodb://localhost/groceryList');
 
 // express.static will serve everything
 // with in client as a static resource
@@ -39,8 +39,8 @@ app.use(function(err, req, res, next){
 })
 
 
-app.listen(3000);
-console.log('listening on port 3000');
+app.listen(process.env.PORT || 8080);
+console.log('listening on port 8080');
 
 module.exports = app;
 
