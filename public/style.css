@@ -95,7 +95,7 @@ a.editable-empty {
 /* -_-_-_-_-_-_-_-_-Inputs-_-_-_-_-_-_-_-_-_- */
 
 
-.box[type="text"]{
+.name[type="text"], .price[type="text"]{
     background-color: transparent;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -110,12 +110,12 @@ a.editable-empty {
     border-radius: 0;
 }
 
-.box:hover {
+.name:hover, .price:hove {
     border: 1px;
     outline: none;
 }
 
-.box:focus {
+.name:focus, .price:focus {
   outline-color: transparent;
   outline-style: none;
   box-shadow: none;
