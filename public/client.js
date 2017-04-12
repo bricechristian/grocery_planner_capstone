@@ -45,6 +45,10 @@ function render(data) {
 
 				});
 
+						$.fn.editableform.buttons = 
+							  '<button type="submit" class="btn btn-success editable-submit btn-mini"><i class="icon-ok icon-blue"></i></button>' +
+							 '<button type="button" class="btn editable-cancel btn-mini"><i class="icon-remove"></i></button>';      
+
 }
 
 

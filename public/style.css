@@ -1,45 +1,47 @@
 
 * {
-font-family: 'Open Sans', sans-serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: .3em;
   font-weight: 300;
   line-height: 1.65;
-  color: #3f3a3a;
 
 }
 
 body{
-    background-color: #000;
-  background:
-      url(pineapple.jpg) no-repeat center center fixed;
-  background-size: cover;
+background: #DE6262;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 }
 
 .logo {
-    width: 150px; 
+    width: 250px; 
     display: block;
-   margin: 0 auto 30px;
+   margin: 30px auto 10px;
 }
 
 h1 {
   text-align: center;
-  font-weight: 800;
+  /*font-weight: 700;*/
   font-size: 2em;
   margin-bottom: 30px;
+  color: #ffffff;
 }
 
 .about {
   text-align: center;
   margin-bottom: 30px;
+  font-size: 1.3em;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: lowercase;
 }
 
 .list-container {
-/*  border: 5px solid #3f3a3a;*/
   margin: auto;
   background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 10px;
+  /*border-radius: 10px;*/
 }
 
 .query-add {
@@ -58,9 +60,9 @@ li {
   margin-bottom: 10px;
 }
 
-.itemName {
-  color: #3f3a3a;
-  font-weight: 700;
+.itemName, .itemName:hover {
+  color: #ffffff;
+  font-size: 1.1em;
   text-decoration: none;
 }
 
@@ -68,36 +70,70 @@ li {
   margin-left: 10px;
   margin-right: 15px;
   text-decoration: none;
-  color: #3f3a3a;
-  font-weight: 700;
+  color: #ffffff;
+  font-size: 1.1em;
 }
 
 .total {
+  color: #ffffff;
+  font-size: 1.2em;
+  text-transform: lowercase;
   font-weight: 700;
 }
 
 .itemPrice:hover {
   cursor: pointer;
+  color: #2fb5b7;
 }
 
-.itemName:hover {
-  text-decoration: none;
-  color: #3f3a3a;
+a.editable-empty {
+  color: black;
+  font-style: italic;
 }
 
+
+/* -_-_-_-_-_-_-_-_-Inputs-_-_-_-_-_-_-_-_-_- */
+
+
+.box[type="text"]{
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width:200px;
+    color: #ffffff;
+    cursor:default;
+    text-align: center; 
+    border: 0;
+    outline: 0;
+    border-bottom: 3px solid white;
+    border-radius: 0;
+}
+
+.box:hover {
+    border: 1px;
+    outline: none;
+}
+
+.box:focus {
+  outline-color: transparent;
+  outline-style: none;
+  box-shadow: none;
+}
 
 /* -_-_-_-_-_-_-_-_-Buttons-_-_-_-_-_-_-_-_-_- */
 
 
 .delete-button, .add-button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
     background: transparent;
     border-radius: 4px;
-    border: 1px solid #3f3a3a;
-    color: #3f3a3a;
+    border: 1px solid #ffffff;
+    color: #ffffff;
     cursor: pointer;
     overflow: hidden;
     display: inline-block;
-    font-weight: 400;
     font-size: .9em;
     height: 2.2em;
     padding: 0 2em;
@@ -107,9 +143,11 @@ li {
 }
 
 .delete-button:hover, .add-button:hover, .delete-button:focus, .add-button:focus, .delete-button:active, .add-button:active {
-    background-color: #3f3a3a;
+    background-color: #2fb5b7;
   color: white;
 }
+
+
 
 
 

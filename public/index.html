@@ -6,6 +6,7 @@
 	<link href="bootstrap-combined.min.css" rel="stylesheet" />
 	<link href="bootstrap-editable.css" rel="stylesheet"
 	/>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 
@@ -15,11 +16,11 @@
 		<div class="row">
 
 			<div class="col-L-12">
-				<img class="logo" src="my_cart-02.png">
+				<img class="logo" src="my_cart.png">
 			</div>
 
 			<div class="col-L-12">
-				<p class="about">My Cart allows you to plan out your grocery list through adding items, editing items and deleting them. Enjoy!</p>
+				<p class="about">Shop Smarter. Plan Better. Enjoy!</p>
 			</div>
 
 			<div class="col-L-12">
@@ -27,11 +28,13 @@
 					<h1>Grocery List</h1>
 					<div class="query-add">
 						<form>
-							<input type="text" placeholder="Grocery Item" name="item" class="name">
-							<input type="text" placeholder="Price" name="price" class="price">
+							<input class="box" type="text" placeholder="Grocery Item" name="item" class="name">
+							<input class="box" type="text" placeholder="Price" name="price" class="price">
 							<button type="submit" class="add-button">Add</button>
 						</form>
+
 					</div>
+
 					<div class="item-container">
 						<ul class="results"></ul>
 					</div>
@@ -44,6 +47,7 @@
 
 		</div>
 	</div>
+
 
 	<script src="jquery-3.2.1.js"></script>
 	<script>
