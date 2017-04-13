@@ -8,6 +8,8 @@ function render(data) {
 
 		$.ajax('/api/items')
 			.done(function (items) {
+						$('.itemInput').val('');
+						$('.priceInput').val('');
 						$('.results').empty();
 						$('.total').empty();
 						for (var i = 0; i < items.length; i++) {
@@ -16,8 +18,8 @@ function render(data) {
 								var itemPrice = item.price;
 								var $template = $('<li></li>');
 								$template.attr('value', item._id);
-								$template.html('<a class="itemName">' + itemName + '</a><a data-pk=' + item._id + ' class="itemPrice"> $' + itemPrice + ' </a>');
-								$template.append('<input type="button" value="Delete" class="delete-button"/><br>');
+								$template.html('<div class="itemContainer col-L-4"><a class="itemName">' + itemName + '</a></div><div class="priceContainer col-L-4"><a data-pk=' + item._id + ' class="itemPrice"> $' + itemPrice + ' </a></div>');
+								$template.append('<div class="deleteContainer col-L-4"><input type="button" value="delete" style="width: 150px; border: none;" class="delete-button"/></div><br>');
 								$('.results').append($template);
 								array.push(Number(itemPrice));
 						}
@@ -60,8 +62,8 @@ function postAJAX(event) {
 				url: '/api/items',
 				type: 'POST',
 				data: {
-						name: $('.name').val(),
-						price: $('.price').val()
+						name: $('.itemInput').val(),
+						price: $('.priceInput').val()
 				}
 		}
 		$.ajax(options).done(render);
@@ -90,7 +92,7 @@ $('.add-button').on('click', postAJAX);
 
 $('.results').on('click', '.delete-button', function () {
 		var id = $(this)
-				.parent()
+				.closest('li')
 				.attr('value');
 		deleteAJAX(id);
 });
