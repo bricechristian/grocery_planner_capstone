@@ -1,0 +1,29 @@
+/* parent */
+
+.row {
+	display: flex;
+	flex-direction: column;
+}
+
+/* child */
+
+.col {
+	flex: 1;
+	padding: .6em;
+	margin: .6em; /*important*/
+}
+
+
+@media screen and (min-width: 500px){
+	.row {
+	flex-flow: row wrap;
+	.col {
+	flex: 1 1 40%;
+	}
+}
+}
+
+
+@media screen and (min-width: 800px){
+	.col {flex: 1;}
+}
