@@ -3,8 +3,6 @@
 <h2>URL</h2>
 https://immense-meadow-84157.herokuapp.com/
 
-
-<h2>Screenshot</h2>
 ![Screenshot](/mycart.png)
 
 <h2>Description</h2>
