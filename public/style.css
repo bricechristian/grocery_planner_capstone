@@ -67,7 +67,17 @@ a.editable-empty {
 }
 
 /* -_-_-_-_-_-_-_-_-Inputs-_-_-_-_-_-_-_-_-_- */
+.itemInput:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
 
+.priceInput:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
 
 .itemInput[type="text"], .priceInput[type="text"]{
     background-color: transparent;
@@ -82,7 +92,7 @@ a.editable-empty {
     border: 0;
     outline: 0;
     border-bottom: 3px solid white;
-    font-size: 1.1em;
+    font-size: .95em;
     font-family: 'Montserrat', sans-serif;
     letter-spacing: .3em;
     font-weight: 300;
@@ -93,11 +103,22 @@ a.editable-empty {
     outline: none;
 }
 
-.itemInput:focus, .priceInput:focus {
-  outline-color: transparent;
-  outline-style: none;
-  box-shadow: none;
+.itemInput::placeholder {
+  color: white;
 }
+
+.priceInput::placeholder {
+  color: white;
+}
+
+.itemInput:hover {
+  border-bottom: 3px solid #FFB88C;
+}
+
+.priceInput:hover {
+  border-bottom: 3px solid #FFB88C;
+}
+
 
 /* -_-_-_-_-_-_-_-_-Buttons-_-_-_-_-_-_-_-_-_- */
 
@@ -126,8 +147,7 @@ a.editable-empty {
     white-space: nowrap;
 }
 
-
-.delete-button:hover, .add-button:hover, .delete-button:focus, .add-button:focus, .delete-button:active, .add-button:active {
+ .add-button:hover, .add-button:focus, .add-button:active {
     background-color: #FFB88C;
   color: white;
 }
@@ -203,12 +223,6 @@ a.editable-empty {
 .col-S-11 { width: 91.66667%; }
 
 .col-S-12 { width: 100%;}
-
-}
-
-@media screen and (max-width: 450px){
-
-.col-OTHER-12 { text-align: center; }
 
 }
 
