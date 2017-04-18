@@ -3,7 +3,7 @@
 <h2>URL</h2>
 https://immense-meadow-84157.herokuapp.com/
 
-<img src="/desktop/mycart.js"/>
+<img src="desktop/mycart.js"/>
 
 <h2>Description</h2>
 Through using Node.js and Express, I created an app that allows you to create, edit and delete items on an ongoing shoppping list. 
