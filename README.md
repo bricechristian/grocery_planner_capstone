@@ -6,7 +6,7 @@ https://immense-meadow-84157.herokuapp.com/
 ![Screenshot](/mycart.png)
 
 <h2>Description</h2>
-Through using Node.js and Express, I created an app that allows you to create, edit and delete items on an ongoing shoppping list. 
+Forget going to the grocery store and having zero idea of how much the items in your cart amount to! With My Cart, you can add, edit and delete grocery items while shopping smarter. 
 
 <h2>Technologies</h2>
 <ul>
