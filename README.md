@@ -1,18 +1,15 @@
-<h1>My Cart</h1>
+MyCart - a responsive app that allows you to add, edit and delete a shopping list items.
 
-<h2>URL</h2>
-https://immense-meadow-84157.herokuapp.com/
-
-![Screenshot](/mycart.png)
-
-<h2>Description</h2>
 Forget going to the grocery store and having zero idea of how much the items in your cart amount to! With My Cart, you can add, edit and delete grocery items while shopping smarter. 
 
-<h2>Technologies</h2>
+##Live site you can access The Daily Tweeter at https://immense-meadow-84157.herokuapp.com/
+
+##Technical 
 <ul>
-<li>HTML</li>
-<li>CSS (Bootstrap)</li>
-<li>Node.js</li>
-<li>Express</li>
-<li>Javascript (Jquery)</li>
+<li>The front-end is built using HTML5, CSS3, JQuery, and a smidge of Bootstrap.</li>
+<li>The back-end is built using Node.js and Express.</li>
+<li>The app is fully responsive, adapted for mobile, tablet and desktop viewports.</li>
+<!-- <li>Testing</li> -->
 </ul>
+
+![Screenshot](/mycart.png)
