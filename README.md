@@ -2,7 +2,7 @@ MyCart - a responsive app that allows you to add, edit and delete a shopping lis
 
 Forget going to the grocery store and having zero idea of how much the items in your cart amount to! With My Cart, you can add, edit and delete grocery items while shopping smarter. 
 
-##Live site you can access The Daily Tweeter at https://immense-meadow-84157.herokuapp.com/
+##Live site you can access My Cart at https://immense-meadow-84157.herokuapp.com/
 
 ##Technical 
 <ul>
