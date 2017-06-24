@@ -6,6 +6,7 @@ function render(data) {
 		var items = data;
 		var array = [];
 
+
 		$.ajax('/api/items')
 			.done(function (items) {
 						$('.itemInput').val('');
@@ -18,8 +19,8 @@ function render(data) {
 								var itemPrice = item.price;
 								var $template = $('<li></li>');
 								$template.attr('value', item._id);
-								$template.html('<div class="itemContainer col-L-4"><a class="itemName">' + itemName + '</a></div><div class="priceContainer col-L-4"><a data-pk=' + item._id + ' class="itemPrice"> $' + itemPrice + ' </a></div>');
-								$template.append('<div class="deleteContainer col-L-4"><input type="button" value="delete" style="width: 150px; border: none;" class="delete-button"/></div><br>');
+								$template.html('<div class="itemContainer col-L-4 col-M-4"><a class="itemName">' + itemName + '</a></div><div class="priceContainer col-L-4 col-M-4"><a data-pk=' + item._id + ' class="itemPrice"> $' + itemPrice + ' </a></div>');
+								$template.append('<div class="deleteContainer col-L-4 col-M-4"><input type="button" value="delete" style="width: 150px; border: none;" class="delete-button"/></div><br>');
 								$('.results').append($template);
 								array.push(Number(itemPrice));
 						}
@@ -45,7 +46,8 @@ function render(data) {
 								$.fn.editable.defaults.mode = 'popup';
 						});
 
-				});   
+				});  
+
 
 }
 
@@ -58,6 +60,8 @@ function render(data) {
 function postAJAX(event) {
 		event.preventDefault();
 
+
+
 		var options = {
 				url: '/api/items',
 				type: 'POST',
@@ -66,7 +70,28 @@ function postAJAX(event) {
 						price: $('.priceInput').val()
 				}
 		}
-		$.ajax(options).done(render);
+
+
+		var price = $('.priceInput').val();
+		var item = $('.itemInput').val();
+
+		if(price == '' && item == ''){
+			alert('Please enter an item and a price');
+		}
+
+		if (isNaN(price) || price == /^\d+$/) {
+			alert('Enter Valid Number')
+	        $( this ).abort(function(){
+				$('.itemInput').val('');
+				$('.priceInput').val('');        	
+	        })
+   		}
+
+
+				$.ajax(options).done(render);
+
+
+
 }
 
 function deleteAJAX(id) {

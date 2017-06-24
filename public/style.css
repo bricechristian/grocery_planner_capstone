@@ -1,7 +1,7 @@
 
 * {
   font-family: 'Montserrat', sans-serif;
-  letter-spacing: .3em;
+  letter-spacing: .08em;
   font-weight: 300;
   line-height: 1.65;
   font-size: 1.05em;
@@ -15,7 +15,8 @@ background: linear-gradient(to right, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, F
 }
 
 .logo {
-  width: 250px; 
+  object-fit: contain;
+  height: 250px; 
   display: block;
   margin: 30px auto 0;
 }
@@ -88,7 +89,7 @@ a.editable-empty {
     width:210px;
     color: #ffffff;
     cursor:default;
-    text-align: center; 
+    text-align: left; 
     border: 0;
     outline: 0;
     border-bottom: 3px solid white;
@@ -98,27 +99,45 @@ a.editable-empty {
     font-weight: 300;
 }
 
+.itemInput[type="text"]{
+    text-indent: 25px;
+}
+
+.priceInput[type="text"]{
+    text-indent: 38px;
+}
+
 .itemInput:hover, .priceInput:hover {
     border: 1px;
     outline: none;
 }
 
-.itemInput::placeholder {
+.itemInput::placeholder, .priceInput::placeholder {
   color: white;
 }
 
-.priceInput::placeholder {
-  color: white;
-}
-
-.itemInput:hover {
+.itemInput:hover, .priceInput:hover {
   border-bottom: 3px solid #FFB88C;
 }
 
-.priceInput:hover {
-  border-bottom: 3px solid #FFB88C;
+.footer {
+  position: relative;
+  top: 100px;
 }
 
+.closing-tag {
+    color: white;
+}
+
+.closing-tag:hover {
+  color: #FFB88C;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
 
 /* -_-_-_-_-_-_-_-_-Buttons-_-_-_-_-_-_-_-_-_- */
 
@@ -152,6 +171,10 @@ a.editable-empty {
   color: white;
 }
 
+.delete-button:hover {
+   color: #FFB88C;
+   font-weight: 700;
+}
 
 
 
